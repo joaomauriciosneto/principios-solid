@@ -13,6 +13,11 @@ export class ShoppingCart {
     this._items.splice(index, 1);
   }
 
+  listAll(): void {
+    console.log('Listando todos os itens...');
+    console.table(this._items.map((items) => items));
+  }
+
   get items(): Readonly<CartItem[]> {
     return this._items;
   }
@@ -62,6 +67,9 @@ shoppingCart.addItem({ name: 'camisa', price: 10 });
 shoppingCart.addItem({ name: 'cueca', price: 15 });
 shoppingCart.addItem({ name: 'meia', price: 5 });
 shoppingCart.addItem({ name: 'calça', price: 89.7 });
+shoppingCart.listAll();
+shoppingCart.removeItem(2);
+shoppingCart.listAll();
 
 console.log(shoppingCart.items);
 console.log(shoppingCart.total());

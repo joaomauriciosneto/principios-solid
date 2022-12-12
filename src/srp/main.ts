@@ -1,3 +1,8 @@
+/**
+ * SRP (Single Responsibility Principle) - Princípio da Responsabilidade Única:
+ * Uma classe deve ter um, e somente um, motivo para mudar.
+ */
+
 import { Messages } from './services/messages';
 import { Order } from './entities/order';
 import { Persistency } from './services/persistency';
